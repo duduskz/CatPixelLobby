@@ -1,0 +1,75 @@
+package cn.lemonnetwork.catpixellobby.MinecraftServer.BungeeCord;
+
+import cn.lemonnetwork.catpixellobby.CatPixelLobby;
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
+import org.bukkit.Bukkit;
+import org.bukkit.Sound;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
+public class ConnectServer {
+  public static void FindServer(Player player, String server) {
+    PotionEffect slowness = new PotionEffect(PotionEffectType.SLOW, 200, 255);
+    player.addPotionEffect(slowness);
+    player.sendMessage("");
+    player.sendMessage("§a正在查找服务器： " + server);
+    player.sendMessage("");
+    player.sendTitle("§b请稍等...", "§e正在搜索可用的服务器！");
+    player.playSound(player.getLocation(), Sound.VILLAGER_HAGGLE, 1.0F, 1.0F);
+    String a = server + "#1";
+    String b = server + "#2";
+    String c = server + "#3";
+    String d = server + "#4";
+    String e = server + "#5";
+    String f = server + "#6";
+    String g = server + "#7";
+    String h = server + "#8";
+    String i = server + "#9";
+    String j = server + "#10";
+    ByteArrayDataOutput aa = ByteStreams.newDataOutput();
+    aa.writeUTF("Connect");
+    aa.writeUTF(a);
+    ByteArrayDataOutput bb = ByteStreams.newDataOutput();
+    bb.writeUTF("Connect");
+    bb.writeUTF(b);
+    ByteArrayDataOutput cc = ByteStreams.newDataOutput();
+    cc.writeUTF("Connect");
+    cc.writeUTF(c);
+    ByteArrayDataOutput dd = ByteStreams.newDataOutput();
+    dd.writeUTF("Connect");
+    dd.writeUTF(d);
+    ByteArrayDataOutput ee = ByteStreams.newDataOutput();
+    ee.writeUTF("Connect");
+    ee.writeUTF(e);
+    ByteArrayDataOutput ff = ByteStreams.newDataOutput();
+    ff.writeUTF("Connect");
+    ff.writeUTF(f);
+    ByteArrayDataOutput gg = ByteStreams.newDataOutput();
+    gg.writeUTF("Connect");
+    gg.writeUTF(g);
+    ByteArrayDataOutput hh = ByteStreams.newDataOutput();
+    hh.writeUTF("Connect");
+    hh.writeUTF(h);
+    ByteArrayDataOutput ii = ByteStreams.newDataOutput();
+    ii.writeUTF("Connect");
+    ii.writeUTF(i);
+    ByteArrayDataOutput jj = ByteStreams.newDataOutput();
+    jj.writeUTF("Connect");
+    jj.writeUTF(j);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", aa.toByteArray()), 20L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", bb.toByteArray()), 40L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", cc.toByteArray()), 60L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", dd.toByteArray()), 80L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", ee.toByteArray()), 100L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", ff.toByteArray()), 120L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", gg.toByteArray()), 140L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", hh.toByteArray()), 160L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", ii.toByteArray()), 180L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> player.sendPluginMessage((Plugin)JavaPlugin.getPlugin(CatPixelLobby.class), "BungeeCord", jj.toByteArray()), 200L);
+    Bukkit.getScheduler().runTaskLater((Plugin)CatPixelLobby.getInstance(), () -> NoServer.NoFoundServer(player), 220L);
+  }
+}

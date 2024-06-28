@@ -1,0 +1,3 @@
+name: CatPixelLobby
+version: '${project.version}'
+main: cn.lemonnetwork.catpixellobby.CatPixelLobby

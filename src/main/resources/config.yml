@@ -1,0 +1,40 @@
+MySQL:
+  url: 127.0.0.1
+  port: 3306
+  db: hypixellobby
+  username: hypixellobby
+  password: hypixellobby
+database:
+  host: "localhost"
+  port: 27017
+  database: "bedwarsleaderBoard"
+
+Holograms:
+  targetLength: 40
+  world: "world"
+  location:
+    kill:
+      x: 11.5
+      y: 106.5
+      z: 40.5
+    win:
+      x: 11.5
+      y: 106.5
+      z: 44.5
+    level:
+      x: 11.5
+      y: 106.5
+      z: 36.5
+    toggle:
+      x: 11.5
+      y: 103.5
+      z: 47.5
+
+ServerSettings:
+  ServerType: "NULL"
+  ServerRoomNumber: ""
+FireWorkTime: 15
+LaunchMessage: "&a你释放了一个烟花！"
+NoAccessMessage: "&c你不能使用这个！"
+CommandUseMessage: "&c使用指令请使用 /fw"
+Timeleft: "&c你必须等待 &e%time &c秒后才能继续使用！"
